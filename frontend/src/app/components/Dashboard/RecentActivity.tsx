@@ -141,7 +141,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ className = '' }) => {
   if (error) {
     return (
       <div className={`bg-white rounded-xl shadow-md p-6 ${className}`}>
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">Recent Activity</h3>
+
         <div className="text-red-500 text-center py-4">
           <p>Error loading activities</p>
           <p className="text-sm mt-1">{error}</p>
@@ -153,7 +153,6 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ className = '' }) => {
   if (activities.length === 0) {
     return (
       <div className={`bg-white rounded-xl shadow-md p-6 ${className}`}>
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">Recent Activity</h3>
         <div className="text-gray-500 text-center py-4">
           No recent activity in the last 24 hours
         </div>
