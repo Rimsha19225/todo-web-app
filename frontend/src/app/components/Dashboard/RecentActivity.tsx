@@ -102,7 +102,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ className = '' }) => {
   };
 
   // Get icon and color based on action type
-  const getActionIconAndColor = (action: string) => {
+  const getActionIconAndColor = (action?: string) => {
     switch (action) {
       case 'task_created':
         return { icon: '🟢', color: 'text-green-500' };
@@ -165,7 +165,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ className = '' }) => {
     <div className={`bg-white rounded-xl shadow-md p-6 ${className}`}>
       <div className="space-y-4">
         {activities.map((activity) => {
-          const { icon, color } = getActionIconAndColor(activity.action);
+          const { icon, color } = getActionIconAndColor(activity.action || '');
           return (
             <div key={activity.id} className="flex items-start space-x-3">
               <div className={`${color} text-xl`}>{icon}</div>

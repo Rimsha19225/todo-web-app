@@ -1,4 +1,8 @@
-export function formatTimeAgo(dateString: string): string {
+export function formatTimeAgo(dateString?: string): string {
+  if (!dateString) {
+    return 'just now'; // or some default value when date is undefined
+  }
+
   const date = new Date(dateString);
   const now = new Date();
   const seconds = Math.floor((now.getTime() - date.getTime()) / 1000);
