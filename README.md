@@ -157,8 +157,3 @@ For production deployment:
 3. Deploy the backend with proper security configurations
 4. Configure reverse proxy and SSL certificates
 5. Set up database backups and monitoring
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.# todo-web-app
-# todo-app-chatbot
